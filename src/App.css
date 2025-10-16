@@ -1,0 +1,41 @@
+/*
+ * Copyright (c) 2025.
+ * valo.media GmbH
+ * All rights reserved.
+ */
+
+/*
+    App.css
+    connect-four
+
+    Created by:
+        * Jean-Pierre Höhmann
+ */
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.card {
+    padding: 2em;
+}
+
+.square {
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 0;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+    color: blue;
+}
