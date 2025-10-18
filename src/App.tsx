@@ -13,6 +13,7 @@
 //
 
 import './App.css';
+import Board from './components/board.tsx';
 
 /**
  * Entry point for the connect-four game.
@@ -22,7 +23,7 @@ function App() {
         <>
             <h1>Connect Four</h1>
             <div className='card'>
-                <button className='square'>O</button>
+                <Board />
             </div>
         </>
     );
