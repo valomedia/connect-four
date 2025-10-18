@@ -18,62 +18,62 @@ function Board() {
  *  */ 
 
 return (
- <>
-  <div>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-  </div>
-  <div>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-  </div>
-  <div>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-  </div>
-  <div>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-  </div>
-  <div>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-  </div>
-  <div>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-    <button className='square'>O</button>
-  </div>
- </>
+	<>
+		<div>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+		</div>
+		<div>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+		</div>
+		<div>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+		</div>
+		<div>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+		</div>
+		<div>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+		</div>
+		<div>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+			<button className='square'>O</button>
+		</div>
+	</>
 )
 
 }
