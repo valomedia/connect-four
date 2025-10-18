@@ -13,7 +13,9 @@
 //
 
 function Board() {
-// construct the board with 6 rows and 7 columns
+/**
+ * This part of the code creates the board for the connect-four game.
+ *  */ 
 
 return (
  <>
