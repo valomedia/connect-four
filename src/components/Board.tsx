@@ -12,11 +12,10 @@
 //      * Daniel Schilling
 //
 
-function Board() {
 /**
- * This part of the code creates the board for the connect-four game.
- *  */ 
-
+ * This part of the code is the board of the connect-four game.
+ */
+function Board() {
 	return (
 		<>
 			<div>
@@ -75,7 +74,6 @@ function Board() {
 			</div>
 		</>
 	);
-
 }
 
 export default Board;
