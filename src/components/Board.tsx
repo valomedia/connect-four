@@ -12,6 +12,8 @@
 //      * Daniel Schilling
 //
 
+import Square from './Square.tsx';
+
 /**
  * Board of the connect-four game.
  */
@@ -19,58 +21,58 @@ function Board() {
 	return (
 		<>
 			<div>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
 			</div>
 			<div>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
 			</div>
 			<div>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
 			</div>
 			<div>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
 			</div>
 			<div>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
 			</div>
 			<div>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
-				<button className='square'>O</button>
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
+				<Square />
 			</div>
 		</>
 	);
