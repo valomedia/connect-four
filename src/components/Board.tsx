@@ -5,7 +5,7 @@
  */
 
 //
-//  App.tsx
+//  Board.tsx
 //  connect-four
 //
 //  Created by:
