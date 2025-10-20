@@ -13,7 +13,7 @@
 //
 
 import './App.css';
-import Board from './components/board.tsx';
+import Board from './components/Board.tsx';
 
 /**
  * Entry point for the connect-four game.
