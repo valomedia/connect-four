@@ -13,7 +13,7 @@
 //
 
 /**
- * This part of the code is the board of the connect-four game.
+ * Board of the connect-four game.
  */
 function Board() {
 	return (
