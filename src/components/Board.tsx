@@ -21,58 +21,58 @@ function Board() {
 	return (
 		<>
 			<div>
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value ={'red'}/>
 			</div>
 			<div>
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value ={'red'}/>
 			</div>
 			<div>
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value ={'red'}/>
 			</div>
 			<div>
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value ={'red'}/>
 			</div>
 			<div>
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value ={'red'}/>
 			</div>
 			<div>
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
-				<Square />
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value={'red'} />
+				<Square value={'blue'}/>
+				<Square value={null}/>
+				<Square value ={'red'}/>
 			</div>
 		</>
 	);

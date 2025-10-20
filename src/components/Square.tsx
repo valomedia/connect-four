@@ -15,10 +15,10 @@
 /**
  * Square of the connect-four game.
  */
-function Square() {
+function Square({value}: { value: 'red'|'blue'|null }) {
 	return ( 
 		<>
-			<button className='square'>O</button>
+			<button className='square'>{value}</button>
 		</>
 	);
 }
