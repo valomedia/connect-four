@@ -14,12 +14,12 @@
 
 /**
  * Square of the connect-four game.
+ * @param value gives the Square the information which color to display
  */
-function Square({value}: { value: 'red'|'blue'|null }) {
+function Square({value}: {value: 'red'|'blue'|null}) {
+	
 	return ( 
-		<>
-			<button className='square'>{value}</button>
-		</>
+		<button className='square'>{value}</button>
 	);
 }
 
