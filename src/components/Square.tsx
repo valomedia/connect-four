@@ -15,12 +15,16 @@
 /**
  * Square of the connect-four game.
  */
-function Square({value}: { value: 'red'|'blue'|null }) {
-	return ( 
-		<>
-			<button className='square'>{value}</button>
-		</>
-	);
+function Square({ value }: { value: "red" | "blue" | null }) {
+    function handleClick() {
+        console.log("Clicked!");
+    }
+
+    return (
+        <button className="square" onClick={handleClick}>
+            {value}
+        </button>
+    );
 }
 
 export default Square;
