@@ -18,64 +18,64 @@ import Square from './Square.tsx';
  * Board of the connect-four game.
  */
 function Board() {
-	return (
-		<>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-		</>
-	);
+    return (
+        <>
+            <div>
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+            </div>
+            <div>
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+            </div>
+            <div>
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+            </div>
+            <div>
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+            </div>
+            <div>
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+            </div>
+            <div>
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
+                <Square value={null} />
+                <Square value={'red'} />
+            </div>
+        </>
+    );
 }
 
 export default Board;
