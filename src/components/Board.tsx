@@ -18,64 +18,68 @@ import Square from './Square.tsx';
  * Board of the connect-four game.
  */
 function Board() {
-	return (
-		<>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-			<div>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value={'red'} />
-				<Square value={'blue'}/>
-				<Square value={null}/>
-				<Square value ={'red'}/>
-			</div>
-		</>
-	);
+    function handleClick() {
+        console.log('Clicked!');
+    }
+
+    return (
+        <>
+            <div>
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+            </div>
+            <div>
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+            </div>
+            <div>
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+            </div>
+            <div>
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+            </div>
+            <div>
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+            </div>
+            <div>
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+                <Square value={'blue'} onClick={handleClick} />
+                <Square value={null} onClick={handleClick} />
+                <Square value={'red'} onClick={handleClick} />
+            </div>
+        </>
+    );
 }
 
 export default Board;

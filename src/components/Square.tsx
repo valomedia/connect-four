@@ -14,17 +14,11 @@
 
 /**
  * Square of the connect-four game.
+ * @param value gives the Square the information which color to display
+ * @param onClick gives Square a function when clicked
  */
-function Square({ value }: { value: "red" | "blue" | null }) {
-    function handleClick() {
-        console.log("Clicked!");
-    }
-
-    return (
-        <button className="square" onClick={handleClick}>
-            {value}
-        </button>
-    );
+function Square({value, onClick}: {value: 'red' | 'blue' | null; onClick: () => void}) {
+    return <button className="square">{value}</button>;
 }
 
 export default Square;
