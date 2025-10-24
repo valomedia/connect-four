@@ -18,7 +18,11 @@
  * @param onClick gives Square a function when clicked
  */
 function Square({value, onClick}: {value: 'red' | 'blue' | null; onClick: () => void}) {
-    return <button className="square">{value}</button>;
+    return (
+        <>
+            <button className="square">{value}</button>;
+        </>
+    ); 
 }
 
 export default Square;
