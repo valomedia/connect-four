@@ -20,7 +20,7 @@
 function Square({value, onClick}: {value: 'red' | 'blue' | null; onClick: () => void}) {
     return (
         <>
-            <button className="square">{value}</button>;
+            <button className="square" onClick={onClick}>{value}</button>
         </>
     ); 
 }
