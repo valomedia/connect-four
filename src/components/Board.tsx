@@ -18,60 +18,64 @@ import Square from './Square.tsx';
  * Board of the connect-four game.
  */
 function Board() {
+    function handleClick() {
+        console.log('Clicked!');
+    }
+
     return (
         <>
             <div>
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
             </div>
             <div>
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
             </div>
             <div>
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
             </div>
             <div>
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
             </div>
             <div>
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
             </div>
             <div>
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
                 <Square value={'blue'} />
-                <Square value={null} />
+                <Square value={null} onClick={handleClick} />
                 <Square value={'red'} />
             </div>
         </>
