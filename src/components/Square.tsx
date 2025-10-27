@@ -12,6 +12,8 @@
 //      * Daniel Schilling
 //
 
+import '../Square.css';
+
 /**
  * Square of the connect-four game.
  * @param value gives the Square the information which color to display
@@ -24,9 +26,13 @@ function Square({
     value: 'red' | 'blue' | null;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }) {
-    return (
-        <button className="square" onClick={onClick}>
-            {value}
+    return !!value ? (
+        <button className={'square-' + value} onClick={onClick}>
+            O
+        </button>
+    ) : (
+        <button className="square-null" onClick={onClick}>
+            0
         </button>
     );
 }
