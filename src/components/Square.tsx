@@ -22,7 +22,7 @@ function Square({
     onClick,
 }: {
     value: 'red' | 'blue' | null;
-    onClick: React.MouseEventHandler<HTMLButtonElement>;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }) {
     return (
         <button className="square" onClick={onClick}>

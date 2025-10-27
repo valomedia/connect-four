@@ -25,58 +25,58 @@ function Board() {
     return (
         <>
             <div>
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
+                <Square value={'red'} />
             </div>
             <div>
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
+                <Square value={'red'} />
             </div>
             <div>
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
+                <Square value={'red'} />
             </div>
             <div>
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
+                <Square value={'red'} />
             </div>
             <div>
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
+                <Square value={'red'} />
             </div>
             <div>
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
-                <Square value={'blue'} onClick={handleClick} />
+                <Square value={'red'} />
+                <Square value={'blue'} />
                 <Square value={null} onClick={handleClick} />
-                <Square value={'red'} onClick={handleClick} />
+                <Square value={'red'} />
             </div>
         </>
     );
