@@ -13,7 +13,6 @@
  */
 
 .square {
-    background: #fff;
     border: 1px solid #999;
     border-radius: 0;
     float: left;
@@ -26,13 +25,39 @@
     padding: 0;
     text-align: center;
     width: 34px;
-    color: white;
 }
 
-.square-blue{
-    color:blue;
+.square-empty {
+    color :#ffffff00
 }
 
-.square-red{
-    color:red;
+
+
+@media (prefers-color-scheme: light){
+    .square{
+        background-color: #f9f9f9;
+    }
+
+    .square-blue {
+        color:blue;
+    }
+
+    .square-red {
+        color:red;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    .square{
+        background-color: #1a1a1a;
+        border: 1px solid #999999b5;
+    }
+
+    .square-blue{
+        color: rgba(0, 0, 255, 0.6);
+    }
+
+    .square-red{
+        color: rgba(255,0,0,0.6);
+    }
 }
