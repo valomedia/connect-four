@@ -26,13 +26,9 @@ function Square({
     value: 'red' | 'blue' | null;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }) {
-    return !!value ? (
+    return (
         <button className={'square-' + value} onClick={onClick}>
             O
-        </button>
-    ) : (
-        <button className="square-null" onClick={onClick}>
-            0
         </button>
     );
 }
