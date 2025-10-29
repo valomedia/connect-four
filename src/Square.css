@@ -12,9 +12,7 @@
         * Daniel Schilling
  */
 
-.square-red,
-.square-null,
-.square-blue {
+.square {
     background: #fff;
     border: 1px solid #999;
     border-radius: 0;
