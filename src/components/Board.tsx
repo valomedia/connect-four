@@ -19,14 +19,20 @@ import Square from './Square.tsx';
  * Board of the connect-four game.
  */
 function Board() {
+    const [turn, setTurn] = useState<('red'|'blue')>('red')
     const [tokens, setTokens] = useState<('red' | 'blue' | null)[]>(
         Array.from({length: 43}, () => null)
     );
     function handleClickAt(square: number) {
         if (tokens[square] == null) {
             const newTokens = tokens.slice();
-            newTokens[square] = 'red';
+            newTokens[square] = turn;
             setTokens(newTokens);
+            if(turn == 'red') {
+                setTurn('blue')
+            } else {
+                setTurn('red')
+            }
         }
     }
 
