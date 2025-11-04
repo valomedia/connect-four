@@ -25,6 +25,9 @@ function Board() {
     );
     function handleClickAt(square: number) {
         if (tokens[square] == null) {
+            while (tokens[square - 7] == null && square > 7) {
+                square = square - 7;
+            }   
             const newTokens = tokens.slice();
             newTokens[square] = turn;
             setTokens(newTokens);
