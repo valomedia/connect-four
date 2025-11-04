@@ -14,12 +14,13 @@
 
 import {useState} from 'react';
 import Square from './Square.tsx';
+import '../Board.css';
 
 /**
  * Board of the connect-four game.
  */
 function Board() {
-    const [turn, setTurn] = useState<('red'|'blue')>('red')
+    const [turn, setTurn] = useState<'red' | 'blue'>('red');
     const [tokens, setTokens] = useState<('red' | 'blue' | null)[]>(
         Array.from({length: 43}, () => null)
     );
@@ -27,20 +28,23 @@ function Board() {
         if (tokens[square] == null) {
             while (tokens[square - 7] == null && square > 7) {
                 square = square - 7;
-            }   
+            }
             const newTokens = tokens.slice();
             newTokens[square] = turn;
             setTokens(newTokens);
-            if(turn == 'red') {
-                setTurn('blue')
+            if (turn == 'red') {
+                setTurn('blue');
             } else {
-                setTurn('red')
+                setTurn('red');
             }
         }
     }
 
     return (
         <>
+            <label className="turn-label" id={'turn-label-' + turn}>
+                It's {turn}'s turn
+            </label>
             <div>
                 <Square value={tokens[36]} onClick={() => handleClickAt(36)} />
                 <Square value={tokens[37]} onClick={() => handleClickAt(37)} />
