@@ -20,7 +20,7 @@ import '../Board.css';
  * Board of the connect-four game.
  */
 function Board() {
-    const [turn, setTurn] = useState<'red' | 'blue'>('red');
+    const [turn, setTurn] = useState<('red'|'blue')>('red')
     const [tokens, setTokens] = useState<('red' | 'blue' | null)[]>(
         Array.from({length: 43}, () => null)
     );
@@ -28,14 +28,14 @@ function Board() {
         if (tokens[square] == null) {
             while (tokens[square - 7] == null && square > 7) {
                 square = square - 7;
-            }
+            }   
             const newTokens = tokens.slice();
             newTokens[square] = turn;
             setTokens(newTokens);
-            if (turn == 'red') {
-                setTurn('blue');
+            if(turn == 'red') {
+                setTurn('blue')
             } else {
-                setTurn('red');
+                setTurn('red')
             }
         }
     }
