@@ -5,33 +5,33 @@
  */
 
 /*
-    Square.css
+    Board.css
     connect-four
 
     Created by:
         * Daniel Schilling
  */
 
- .turn-label{
-    font-size: 2.75em;
+ .turn-text{
+    font-size: 2.5em;
  }
 
 @media (prefers-color-scheme: light){
-    label#turn-label-blue {
+    span#text-blue {
         color:blue;
     }
 
-    label#turn-label-red {
+    span#text-red {
         color:red;
     }
 }
 
 @media (prefers-color-scheme: dark){
-    label#turn-label-blue {
+    span#text-blue {
         color:rgba(0, 0, 255, 0.6);
     }
 
-    label#turn-label-red {
+    span#text-red {
         color:rgba(255, 0, 0, 0.6);
     }
 }
