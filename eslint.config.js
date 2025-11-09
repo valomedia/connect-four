@@ -18,8 +18,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import {defineConfig, globalIgnores} from 'eslint/config'
-import * as reactX from "typescript-eslint";
-import * as reactDom from "typescript-eslint";
+import eslintReact from "@eslint-react/eslint-plugin"
 
 export default defineConfig([
     globalIgnores(['dist']),
@@ -31,9 +30,7 @@ export default defineConfig([
             reactHooks.configs['recommended-latest'],
             reactRefresh.configs.vite,
             // Enable lint rules for React
-            reactX.configs['recommended-typescript'],
-            // Enable lint rules for React DOM
-            reactDom.configs.recommended,
+            eslintReact.configs['recommended-typescript'],
         ],
         languageOptions: {
             ecmaVersion: 2020,
