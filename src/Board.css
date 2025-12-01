@@ -17,21 +17,21 @@
  }
 
 @media (prefers-color-scheme: light){
-    span#text-blue {
+    .text-blue {
         color:blue;
     }
 
-    span#text-red {
+    .text-red {
         color:red;
     }
 }
 
 @media (prefers-color-scheme: dark){
-    span#text-blue {
+    .text-blue {
         color:rgba(0, 0, 255, 0.6);
     }
 
-    span#text-red {
+    .text-red {
         color:rgba(255, 0, 0, 0.6);
     }
 }

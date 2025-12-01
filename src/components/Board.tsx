@@ -43,7 +43,7 @@ function Board() {
     return (
         <>
             <p className="turn-text">
-                It's <span id={'text-' + turn}>{turn}'s </span>turn
+                It's <span className={'text-' + turn}>{turn}'s </span>turn
             </p>
             <div>
                 <Square value={tokens[36]} onClick={() => handleClickAt(36)} />
