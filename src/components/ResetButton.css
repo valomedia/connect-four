@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2025.
+ * valo.media GmbH
+ * All rights reserved.
+ */
+
+/*
+    ResetButton.css
+    connect-four
+
+    Created by:
+        * Daniel Schilling
+ */
+
+ .reset-button {
+    font-size: 1.5rem;
+    margin-top: 2em;
+ }
