@@ -16,6 +16,7 @@ import './ResetButton.css'
 
 /**
  * Button with the ability to reset the Board of the connect-four game.
+ * 
  * @param onClick assigns a function to the ResetButton that is executed when clicked.
  */
 function ResetButton({onClick}: {onClick: React.MouseEventHandler<HTMLButtonElement>}) {
