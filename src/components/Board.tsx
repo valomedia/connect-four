@@ -14,6 +14,7 @@
 
 import {useState} from 'react';
 import Square from './Square.tsx';
+import '../Board.css';
 
 /**
  * Board of the connect-four game.
@@ -41,6 +42,9 @@ function Board() {
 
     return (
         <>
+            <p className="turn-text">
+                It's <span className={'text-' + turn}>{turn}'s </span>turn
+            </p>
             <div>
                 <Square value={tokens[36]} onClick={() => handleClickAt(36)} />
                 <Square value={tokens[37]} onClick={() => handleClickAt(37)} />
