@@ -12,7 +12,7 @@
 //      * Daniel Schilling
 //
 
-import '../Square.css';
+import './Square.css';
 
 /**
  * Square of the connect-four game, is able to display, red, blue or empty. 
