@@ -13,6 +13,30 @@
         * Jean-Pierre Höhmann
 */
 
+.turn-text {
+    font-size: 2.5em;
+}
+
+@media (prefers-color-scheme: light){
+    .text-blue {
+        color:blue;
+    }
+
+    .text-red {
+        color:red;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    .text-blue {
+        color:rgba(0, 0, 255, 0.6);
+    }
+
+    .text-red {
+        color:rgba(255, 0, 0, 0.6);
+    }
+}
+
 .reset-button {
     font-size: 1.5rem;
     margin-top: 2em;

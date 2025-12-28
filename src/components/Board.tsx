@@ -24,7 +24,7 @@ function Board() {
     const [tokens, setTokens] = useState<('red' | 'blue' | null)[]>(
         Array.from({length: 43}, () => null)
     );
-    
+
     function handleClickAt(square: number) {
         if (tokens[square] == null) {
             while (tokens[square - 7] == null && square > 7) {
@@ -48,6 +48,9 @@ function Board() {
 
     return (
         <>
+            <p className="turn-text">
+                It's <span className={'text-' + turn}>{turn}'s </span>turn
+            </p>
             <div>
                 <Square value={tokens[36]} onClick={() => handleClickAt(36)} />
                 <Square value={tokens[37]} onClick={() => handleClickAt(37)} />
