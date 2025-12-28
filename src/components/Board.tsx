@@ -14,7 +14,7 @@
 
 import {useState} from 'react';
 import Square from './Square.tsx';
-import ResetButton from './ResetButton.tsx';
+import './Board.css';
 
 /**
  * Board of the connect-four game.
@@ -102,7 +102,7 @@ function Board() {
                 <Square value={tokens[6]} onClick={() => handleClickAt(6)} />
                 <Square value={tokens[7]} onClick={() => handleClickAt(7)} />
             </div>
-            <ResetButton onClick={reset} />
+            <button className='reset-button' onClick={reset}>Reset</button>
         </>
     );
 }
