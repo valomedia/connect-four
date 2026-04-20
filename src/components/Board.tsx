@@ -24,26 +24,139 @@ function Board() {
     const [tokens, setTokens] = useState<('red' | 'blue' | null)[]>(
         Array.from({length: 43}, () => null)
     );
+    const [winner, setWinner] = useState<('red'|'blue')>('red')
+    const [isGameFinished, setIsGameFinished] = useState(false)
 
     function handleClickAt(square: number) {
-        if (tokens[square] == null) {
-            while (tokens[square - 7] == null && square > 7) {
-                square = square - 7;
-            }   
-            const newTokens = tokens.slice();
-            newTokens[square] = turn;
-            setTokens(newTokens);
-            if(turn == 'red') {
-                setTurn('blue')
-            } else {
-                setTurn('red')
+        if (!isGameFinished) {
+            if (tokens[square] == null) {
+                while (tokens[square - 7] == null && square > 7) {
+                    square = square - 7;
+                }
+                const newTokens = tokens.slice();
+                newTokens[square] = turn;
+                setTokens(newTokens);
+
+                checkForWinner(square, turn);
+
+                if (turn == 'red') {
+                    setTurn('blue')
+                } else {
+                    setTurn('red')
+                }
+            }
+        } else {
+            console.log("The game is finished, no more Input possible! Click Restart to play another round.");
+        }
+    }
+
+    
+
+    function checkForWinner(lastPos: number, turn: 'red'|'blue') {
+        let counter = 1;
+        console.log(lastPos, turn);
+
+        if (tokens[left(lastPos)] == turn) {counter += 1;
+            console.log(lastPos);
+            if (tokens[left(left(lastPos))] == turn) {counter += 1;
+                if (tokens[left(left(left(lastPos)))] == turn) {counter += 1;}
             }
         }
+        if (tokens[right(lastPos)] == turn) {counter += 1;
+            if (tokens[right(right(lastPos))] == turn) {counter += 1;
+                if (tokens[right(right(right(lastPos)))] == turn) {counter += 1;}
+            }
+        }
+
+        if (counter >= 4){
+            playerWon(turn);
+        }
+        counter = 1;
+
+        if (tokens[up(lastPos)] == turn) {counter += 1;
+            if (tokens[up(up(lastPos))] == turn) {counter += 1;
+                if (tokens[up(up(up(lastPos)))] == turn) {counter += 1;}
+            }
+        }
+        if (tokens[down(lastPos)] == turn) {counter += 1;
+            if (tokens[down(down(lastPos))] == turn) {counter += 1;
+                if (tokens[down(down(down(lastPos)))] == turn) {counter += 1;}
+            }
+        }
+
+        if (counter >= 4){
+            playerWon(turn);
+        }
+        counter = 1;
+
+        if (tokens[lup(lastPos)] == turn) {counter += 1;
+            if (tokens[lup(lup(lastPos))] == turn) {counter += 1;
+                if (tokens[lup(lup(lup(lastPos)))] == turn) {counter += 1;}
+            }
+        }
+        if (tokens[rdown(lastPos)] == turn) {counter += 1;
+            if (tokens[rdown(rdown(lastPos))] == turn) {counter += 1;
+                if (tokens[rdown(rdown(rdown(lastPos)))] == turn) {counter += 1;}
+            }
+        }
+
+        if (counter >= 4){
+            playerWon(turn);
+        }
+        counter = 1;
+
+        if (tokens[rup(lastPos)] == turn) {counter += 1;
+            if (tokens[rup(rup(lastPos))] == turn) {counter += 1;
+                if (tokens[rup(rup(rup(lastPos)))] == turn) {counter += 1;}
+            }
+        }
+        if (tokens[ldown(lastPos)] == turn) {counter += 1;
+            if (tokens[ldown(ldown(lastPos))] == turn) {counter += 1;
+                if (tokens[ldown(ldown(ldown(lastPos)))] == turn) {counter += 1;}
+            }
+        }
+
+        if (counter >= 4){
+            playerWon(turn);
+        }
+        counter = 1;
+    }
+
+    function left(pos: number): number {
+        return pos - 1;
+    }
+    function right(pos: number): number {
+        return pos + 1;
+    }
+    function up(pos: number): number {
+        return pos - 7;
+    }
+    function down(pos: number): number {
+        return pos + 7;
+    }
+    function lup(pos: number): number {
+        return pos - 8;
+    }
+    function rup(pos: number): number {
+        return pos - 6;
+    }
+    function ldown(pos: number): number {
+        return pos + 6;
+    }
+    function rdown(pos: number): number {
+        return pos + 8;
+    }
+
+    function playerWon(turn: 'red'|'blue') {
+        setIsGameFinished(true);
+        setWinner(turn);
+        console.log(turn + " won the game");
     }
 
     function reset() {
         setTurn('red');
         setTokens(Array.from({length: 43}, () => null))
+        setIsGameFinished(false);
     }
 
     return (
@@ -106,6 +219,7 @@ function Board() {
                 <Square value={tokens[7]} onClick={() => handleClickAt(7)} />
             </div>
             <button className='reset-button' onClick={reset}>Reset</button>
+            {isGameFinished ? <div><p>{winner} won the game!</p> <p>Press Restart to play another match</p></div> : ""}
         </>
     );
 }
