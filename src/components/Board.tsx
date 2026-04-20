@@ -122,9 +122,11 @@ function Board() {
     }
 
     function left(pos: number, amount: number): number {
+        // noinspection PointlessArithmeticExpressionJS
         return pos - 1 * amount;
     }
     function right(pos: number, amount: number): number {
+        // noinspection PointlessArithmeticExpressionJS
         return pos + 1 * amount;
     }
     function up(pos: number, amount: number): number {
