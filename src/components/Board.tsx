@@ -56,16 +56,16 @@ function Board() {
         let counter = 1;
         console.log(lastPos, turn);
 
-        if (tokens[left(lastPos)] == turn) {counter += 1;
-            console.log(lastPos);
-            if (tokens[left(left(lastPos))] == turn) {counter += 1;
-                if (tokens[left(left(left(lastPos)))] == turn) {counter += 1;}
-            }
+        for (let i = 1; i <= 3; i++) {
+            if (tokens[left(lastPos, i)] == turn) {
+                counter += 1
+            } else break
         }
-        if (tokens[right(lastPos)] == turn) {counter += 1;
-            if (tokens[right(right(lastPos))] == turn) {counter += 1;
-                if (tokens[right(right(right(lastPos)))] == turn) {counter += 1;}
-            }
+
+        for (let i = 1; i <= 3; i++) {
+            if (tokens[right(lastPos, i)] == turn) {
+                counter += 1
+            } else break
         }
 
         if (counter >= 4){
@@ -73,31 +73,15 @@ function Board() {
         }
         counter = 1;
 
-        if (tokens[up(lastPos)] == turn) {counter += 1;
-            if (tokens[up(up(lastPos))] == turn) {counter += 1;
-                if (tokens[up(up(up(lastPos)))] == turn) {counter += 1;}
-            }
+        for (let i = 1; i <= 3; i++) {
+            if (tokens[up(lastPos, i)] == turn) {
+                counter += 1
+            } else break
         }
-        if (tokens[down(lastPos)] == turn) {counter += 1;
-            if (tokens[down(down(lastPos))] == turn) {counter += 1;
-                if (tokens[down(down(down(lastPos)))] == turn) {counter += 1;}
-            }
-        }
-
-        if (counter >= 4){
-            playerWon(turn);
-        }
-        counter = 1;
-
-        if (tokens[lup(lastPos)] == turn) {counter += 1;
-            if (tokens[lup(lup(lastPos))] == turn) {counter += 1;
-                if (tokens[lup(lup(lup(lastPos)))] == turn) {counter += 1;}
-            }
-        }
-        if (tokens[rdown(lastPos)] == turn) {counter += 1;
-            if (tokens[rdown(rdown(lastPos))] == turn) {counter += 1;
-                if (tokens[rdown(rdown(rdown(lastPos)))] == turn) {counter += 1;}
-            }
+        for (let i = 1; i <= 3; i++) {
+            if (tokens[down(lastPos, i)] == turn) {
+                counter += 1
+            } else break
         }
 
         if (counter >= 4){
@@ -105,46 +89,61 @@ function Board() {
         }
         counter = 1;
 
-        if (tokens[rup(lastPos)] == turn) {counter += 1;
-            if (tokens[rup(rup(lastPos))] == turn) {counter += 1;
-                if (tokens[rup(rup(rup(lastPos)))] == turn) {counter += 1;}
-            }
+        for (let i = 1; i <= 3; i++) {
+            if (tokens[lup(lastPos, i)] == turn) {
+                counter += 1
+            } else break
         }
-        if (tokens[ldown(lastPos)] == turn) {counter += 1;
-            if (tokens[ldown(ldown(lastPos))] == turn) {counter += 1;
-                if (tokens[ldown(ldown(ldown(lastPos)))] == turn) {counter += 1;}
-            }
+        for (let i = 1; i <= 3; i++) {
+            if (tokens[rdown(lastPos, i)] == turn) {
+                counter += 1
+            } else break
         }
 
         if (counter >= 4){
             playerWon(turn);
         }
         counter = 1;
+
+        for (let i = 1; i <= 3; i++) {
+            if (tokens[rup(lastPos, i)] == turn) {
+                counter += 1
+            } else break
+        }
+        for (let i = 1; i <= 3; i++) {
+            if (tokens[ldown(lastPos, i)] == turn) {
+                counter += 1
+            } else break
+        }
+
+        if (counter >= 4){
+            playerWon(turn);
+        }
     }
 
-    function left(pos: number): number {
-        return pos - 1;
+    function left(pos: number, amount: number): number {
+        return pos - 1 * amount;
     }
-    function right(pos: number): number {
-        return pos + 1;
+    function right(pos: number, amount: number): number {
+        return pos + 1 * amount;
     }
-    function up(pos: number): number {
-        return pos - 7;
+    function up(pos: number, amount: number): number {
+        return pos - 7 * amount;
     }
-    function down(pos: number): number {
-        return pos + 7;
+    function down(pos: number, amount: number): number {
+        return pos + 7 * amount;
     }
-    function lup(pos: number): number {
-        return pos - 8;
+    function lup(pos: number, amount: number): number {
+        return pos - 8 * amount;
     }
-    function rup(pos: number): number {
-        return pos - 6;
+    function rup(pos: number, amount: number): number {
+        return pos - 6 * amount;
     }
-    function ldown(pos: number): number {
-        return pos + 6;
+    function ldown(pos: number, amount: number): number {
+        return pos + 6 * amount;
     }
-    function rdown(pos: number): number {
-        return pos + 8;
+    function rdown(pos: number, amount: number): number {
+        return pos + 8 * amount;
     }
 
     function playerWon(turn: 'red'|'blue') {
