@@ -28,25 +28,25 @@ function Board() {
     const [isGameFinished, setIsGameFinished] = useState(false)
 
     function handleClickAt(square: number) {
-        if (!isGameFinished) {
-            if (tokens[square] == null) {
-                while (tokens[square - 7] == null && square > 7) {
-                    square = square - 7;
-                }
-                const newTokens = tokens.slice();
-                newTokens[square] = turn;
-                setTokens(newTokens);
-
-                checkForWinner(square, turn);
-
-                if (turn == 'red') {
-                    setTurn('blue')
-                } else {
-                    setTurn('red')
-                }
-            }
-        } else {
+        if (isGameFinished) {
             console.log("The game is finished, no more Input possible! Click Restart to play another round.");
+            return;
+        }
+        if (tokens[square] == null) {
+            while (tokens[square - 7] == null && square > 7) {
+                square = square - 7;
+            }
+            const newTokens = tokens.slice();
+            newTokens[square] = turn;
+            setTokens(newTokens);
+
+            checkForWinner(square, turn);
+
+            if (turn == 'red') {
+                setTurn('blue')
+            } else {
+                setTurn('red')
+            }
         }
     }
 
@@ -121,29 +121,69 @@ function Board() {
         }
     }
 
+    /**
+     * Moves the given pos one square to the left in the game grid.
+     * @param pos starting position in the game grid
+     * @param amount amount of move-operations
+     */
     function left(pos: number, amount: number): number {
         // noinspection PointlessArithmeticExpressionJS
         return pos - 1 * amount;
     }
+    /**
+     * Moves the given pos one square to the right in the game grid.
+     * @param pos starting position in the game grid
+     * @param amount amount of move-operations
+     */
     function right(pos: number, amount: number): number {
         // noinspection PointlessArithmeticExpressionJS
         return pos + 1 * amount;
     }
+    /**
+     * Moves the given pos one square up in the game grid.
+     * @param pos starting position in the game grid
+     * @param amount amount of move-operations
+     */
     function up(pos: number, amount: number): number {
         return pos - 7 * amount;
     }
+    /**
+     * Moves the given pos one square down in the game grid.
+     * @param pos starting position in the game grid
+     * @param amount amount of move-operations
+     */
     function down(pos: number, amount: number): number {
         return pos + 7 * amount;
     }
+    /**
+     * Moves the given pos one square to the left and one up in the game grid.
+     * @param pos starting position in the game grid
+     * @param amount amount of move-operations
+     */
     function lup(pos: number, amount: number): number {
         return pos - 8 * amount;
     }
+    /**
+     * Moves the given pos one square to the right and one up in the game grid.
+     * @param pos starting position in the game grid
+     * @param amount amount of move-operations
+     */
     function rup(pos: number, amount: number): number {
         return pos - 6 * amount;
     }
+    /**
+     * Moves the given pos one square to the left and one down in the game grid.
+     * @param pos starting position in the game grid
+     * @param amount amount of move-operations
+     */
     function ldown(pos: number, amount: number): number {
         return pos + 6 * amount;
     }
+    /**
+     * Moves the given pos one square to the right and one down in the game grid.
+     * @param pos starting position in the game grid
+     * @param amount amount of move-operations
+     */
     function rdown(pos: number, amount: number): number {
         return pos + 8 * amount;
     }
