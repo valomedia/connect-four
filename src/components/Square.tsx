@@ -28,7 +28,7 @@ function Square({
 }) {
     return (
         <button
-            className={'square ' + (!!value ? 'square-' + value : 'square-empty')}
+            className={'square ' + (value ? 'square-' + value : 'square-empty')}
             onClick={onClick}
         >
             O
