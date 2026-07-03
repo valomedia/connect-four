@@ -13,6 +13,7 @@
   and build tooling in shells where `NODE_ENV=production`.
 - `npm run dev` - start the Vite development server.
 - `NODE_ENV=test npm run test` - run the Vitest test suite once.
+- `npm run test:integration` - run the Playwright browser integration tests.
 - `npm run lint` - run ESLint across the repository.
 - `npm run build` - run TypeScript project builds and create the Vite production build.
 - `npm run preview` - preview the built Vite app locally after a build.
@@ -27,6 +28,7 @@
 - `src/components/Square.tsx` - individual board square button.
 - `src/components/*.test.tsx` - colocated React Testing Library and Vitest tests.
 - `src/test/setup.ts` - shared Vitest setup for cleanup and jest-dom matchers.
+- `tests/integration/*.spec.ts` - Playwright browser integration tests.
 - `public/` - static assets served by Vite.
 
 ## Working rules
@@ -42,6 +44,7 @@
 
 ## Testing
 - Run `NODE_ENV=test npm run test` for component and game behavior changes.
+- Run `npm run test:integration` for end-to-end browser coverage.
 - Run `npm run lint` for TypeScript,
   React,
   and hook rule checks.
