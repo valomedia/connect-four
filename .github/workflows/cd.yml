@@ -1,0 +1,23 @@
+name: CD
+
+on:
+  schedule:
+    - cron: '37 3 * * 5'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  deploy:
+    uses: valomedia/github-workflows/.github/workflows/scheduled-sftp-release.yml@v1.0.2
+    with:
+      ci-workflow: ci.yml
+      build-command: npm run build
+      dist-path: dist
+      sftp-host: ${{ vars.SFTP_HOST }}
+      sftp-port: ${{ vars.SFTP_PORT || '22' }}
+      sftp-username: ${{ vars.SFTP_USERNAME }}
+      sftp-remote-path: ${{ vars.SFTP_REMOTE_PATH }}
+    secrets: inherit
