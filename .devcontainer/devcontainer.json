@@ -1,0 +1,36 @@
+{
+  "name": "Connect Four",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".",
+    "args": {
+      "PLAYWRIGHT_VERSION": "1.61.1"
+    }
+  },
+  "remoteUser": "node",
+  "containerEnv": {
+    "NODE_ENV": "development"
+  },
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node-modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=${localWorkspaceFolderBasename}-npm-cache,target=/home/node/.npm,type=volume",
+    "source=${localWorkspaceFolderBasename}-playwright-cache,target=/home/node/.cache/ms-playwright,type=volume"
+  ],
+  "postCreateCommand": "sudo /usr/local/bin/connect-four-devcontainer-prepare-volumes \"${containerWorkspaceFolder}/node_modules\" /home/node/.npm /home/node/.cache/ms-playwright && npm ci --include=dev && npx playwright install chromium",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite dev server",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "vitest.explorer",
+        "ms-playwright.playwright"
+      ]
+    }
+  }
+}
