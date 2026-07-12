@@ -2,10 +2,7 @@
   "name": "Connect Four",
   "build": {
     "dockerfile": "Dockerfile",
-    "context": ".",
-    "args": {
-      "PLAYWRIGHT_VERSION": "1.61.1"
-    }
+    "context": "."
   },
   "remoteUser": "node",
   "containerEnv": {
