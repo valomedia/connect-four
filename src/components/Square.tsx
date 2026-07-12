@@ -4,14 +4,6 @@
  * All rights reserved.
  */
 
-//
-//  Square.tsx
-//  connect-four
-//
-//  Created by:
-//      * Daniel Schilling
-//
-
 import './Square.css';
 
 /**

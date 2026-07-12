@@ -4,14 +4,6 @@
  * All rights reserved.
  */
 
-//
-//  vite.config.ts
-//  connect-four
-//
-//  Created by:
-//      * Jean-Pierre Höhmann
-//
-
 import {configDefaults, defineConfig} from 'vitest/config'
 import react from '@vitejs/plugin-react'
 

@@ -4,14 +4,6 @@
  * All rights reserved.
  */
 
-//
-//  playwright.config.ts
-//  connect-four
-//
-//  Created by:
-//      * OpenClaw
-//
-
 import {defineConfig, devices} from '@playwright/test';
 
 export default defineConfig({

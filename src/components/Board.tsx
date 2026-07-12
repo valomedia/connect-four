@@ -4,14 +4,6 @@
  * All rights reserved.
  */
 
-//
-//  Board.tsx
-//  connect-four
-//
-//  Created by:
-//      * Daniel Schilling
-//
-
 import {useState} from 'react';
 import Square from './Square.tsx';
 import './Board.css';
