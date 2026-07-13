@@ -6,7 +6,7 @@ The repository also serves as a sandbox for training and coding challenges.
 
 ## Requirements
 
-- Node.js `^20.19.0` or `>=22.12.0`
+- Node.js 22 or higher
 - npm
 
 ## Getting started
