@@ -8,9 +8,6 @@
 //  App.tsx
 //  connect-four
 //
-//  Created by:
-//      * Jean-Pierre Höhmann
-//
 
 import './App.css';
 import Board from './components/Board.tsx';

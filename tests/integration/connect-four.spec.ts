@@ -8,9 +8,6 @@
 //  connect-four.spec.ts
 //  connect-four
 //
-//  Created by:
-//      * OpenClaw
-//
 
 import {expect, test, type Locator, type Page} from '@playwright/test';
 
