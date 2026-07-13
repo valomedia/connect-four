@@ -4,6 +4,11 @@
  * All rights reserved.
  */
 
+//
+//  eslint.config.js
+//  connect-four
+//
+
 import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'

@@ -4,6 +4,11 @@
  * All rights reserved.
  */
 
+//
+//  App.tsx
+//  connect-four
+//
+
 import './App.css';
 import Board from './components/Board.tsx';
 

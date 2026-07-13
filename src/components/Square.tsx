@@ -4,6 +4,11 @@
  * All rights reserved.
  */
 
+//
+//  Square.tsx
+//  connect-four
+//
+
 import './Square.css';
 
 /**

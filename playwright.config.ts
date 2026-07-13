@@ -4,6 +4,11 @@
  * All rights reserved.
  */
 
+//
+//  playwright.config.ts
+//  connect-four
+//
+
 import {defineConfig, devices} from '@playwright/test';
 
 export default defineConfig({

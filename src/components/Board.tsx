@@ -4,6 +4,11 @@
  * All rights reserved.
  */
 
+//
+//  Board.tsx
+//  connect-four
+//
+
 import {useState} from 'react';
 import Square from './Square.tsx';
 import './Board.css';

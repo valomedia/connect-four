@@ -4,6 +4,11 @@
  * All rights reserved.
  */
 
+//
+//  connect-four.spec.ts
+//  connect-four
+//
+
 import {expect, test, type Locator, type Page} from '@playwright/test';
 
 function getSquares(page: Page): Locator {
