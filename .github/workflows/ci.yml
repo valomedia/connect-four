@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   ci:
-    uses: valomedia/github-workflows/.github/workflows/node-npm-ci.yml@v1
+    uses: valomedia/github-workflows/.github/workflows/node-npm-ci.yml@a8d9649a0fa8c4623523524c663fea77ebffb093 # v1.1.0
     with:
       integration-install-command: npx playwright install --with-deps chromium
       integration-test-command: npm run test:integration
