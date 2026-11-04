@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025.
+ * Copyright (c) 2025-2026.
  * valo.media GmbH
  * All rights reserved.
  */
@@ -9,20 +9,29 @@
 //  connect-four
 //
 
+/**
+ * Individual cells of the Connect Four board.
+ * @module
+ */
+
 import './Square.css';
 
+/** Configuration for a single board square. */
+export interface SquareProps {
+    /** Token color to display, or null for an empty square. */
+    value: 'red' | 'blue' | null;
+    /** Handles a player's attempt to place a token in this column. */
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
+}
+
 /**
- * Square of the connect-four game, is able to display, red, blue or empty. 
- * @param value gives the Square the information which color to display
- * @param onClick gives Square a function when clicked
+ * Displays a red, blue, or empty square as a clickable button.
+ * @param props - The token color and optional click handler.
  */
 function Square({
     value,
     onClick,
-}: {
-    value: 'red' | 'blue' | null;
-    onClick?: React.MouseEventHandler<HTMLButtonElement>;
-}) {
+}: SquareProps) {
     return (
         <button
             className={'square ' + (value ? 'square-' + value : 'square-empty')}
