@@ -1,0 +1,38 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["src"],
+  "entryPointStrategy": "expand",
+  "exclude": ["src/main.tsx", "**/*.test.*", "**/*.spec.*", "src/test/**"],
+  "tsconfig": "tsconfig.app.json",
+  "plugin": ["typedoc-plugin-markdown", "./scripts/validate-doc-comments.mjs"],
+  "out": "docs/api",
+  "readme": "none",
+  "disableSources": true,
+  "excludeExternals": true,
+  "validation": {
+    "notDocumented": true
+  },
+  "requiredToBeDocumented": [
+    "Module",
+    "Namespace",
+    "Enum",
+    "EnumMember",
+    "Variable",
+    "Function",
+    "Class",
+    "Interface",
+    "Constructor",
+    "Property",
+    "Method",
+    "CallSignature",
+    "IndexSignature",
+    "ConstructorSignature",
+    "Parameter",
+    "TypeParameter",
+    "Accessor",
+    "GetSignature",
+    "SetSignature",
+    "TypeAlias"
+  ],
+  "treatWarningsAsErrors": true
+}

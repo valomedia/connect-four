@@ -1,0 +1,20 @@
+# Copyright (c) 2026.
+# valo.media GmbH
+# All rights reserved.
+
+set -eu
+
+# Generate only when documentation inputs match the commit's index.
+# Never stage source files or consume uncommitted source changes implicitly.
+set -- src package.json package-lock.json 'tsconfig*.json' typedoc.json scripts
+# TypeDoc also discovers ignored source files, so include them in this guard.
+# Only Husky's generated installation files may remain ignored and untracked.
+if ! git diff --quiet -- "$@" .husky ||
+    [ -n "$(git ls-files --others -- "$@")" ] ||
+    [ -n "$(git ls-files --others --exclude-standard -- .husky)" ]; then
+    echo 'API docs: stage or stash all source and documentation-tooling changes before committing.' >&2
+    exit 1
+fi
+
+npm run docs
+git add --all -- docs/api
