@@ -5,6 +5,7 @@
   "exclude": ["src/main.tsx", "**/*.test.*", "**/*.spec.*", "src/test/**"],
   "tsconfig": "tsconfig.app.json",
   "plugin": ["typedoc-plugin-markdown", "./scripts/validate-doc-comments.mjs"],
+  "router": "module",
   "out": "docs/api",
   "readme": "none",
   "disableSources": true,

@@ -6,6 +6,6 @@
 
 ## Modules
 
-- [App](App/README.md)
-- [components/Board](components/Board/README.md)
-- [components/Square](components/Square/README.md)
+- [App](App.md)
+- [components/Board](components/Board.md)
+- [components/Square](components/Square.md)
