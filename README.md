@@ -42,16 +42,14 @@ TypeDoc and `typedoc-plugin-markdown` generate it from exported application APIs
 The React mounting entry point, tests, and test setup are excluded.
 
 Dependency installation configures Git to use the standard hooks in `.githooks/`.
-On every commit, the hook runs `npm run docs`
-and stages only the generated `docs/api/` directory, including removal of obsolete pages.
+On every commit, the hook runs `npm run docs` in a temporary snapshot of the staged files,
+using installed dependencies, and stages only `docs/api/`, including removal of obsolete pages.
 Missing doc-comments or other TypeDoc warnings block the commit.
 TypeDoc checks its default set of required declarations for `/** ... */` doc-comments.
 
-Stage or stash all changes under `src/`, `scripts/`, and `.githooks/`,
-as well as changes to package files, `typedoc.json`, and root `tsconfig*.json` files before committing.
-The hook rejects unstaged or untracked documentation inputs rather than generating docs from code
-that is not part of the commit.
-Ignored source files also block the commit because TypeDoc can discover them.
+Unstaged, untracked, and ignored source changes do not affect generated docs and are left untouched.
+The hook refreshes the docs working copy only when it contains no local edits or untracked files;
+otherwise it updates only the committed docs.
 Unrelated files are never staged automatically.
 
 Do not edit `docs/api/` by hand; update the source comments and run `npm run docs` instead.

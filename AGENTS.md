@@ -43,9 +43,10 @@
   matching the existing component style.
 - Do not hand-edit generated build output such as `dist/` or generated API docs in `docs/api/`.
 - `npm ci --include=dev` configures Git's `core.hooksPath` as `.githooks` through `prepare`.
-  The hook regenerates and stages only `docs/api/`.
-  Stage or stash all source and documentation-tooling changes before committing;
-  the hook rejects unstaged or untracked inputs, including ignored source files.
+  The hook generates `docs/api/` from an isolated snapshot of the commit's index,
+  using installed dependencies, and stages only those docs.
+  Unstaged and untracked inputs are left alone.
+  The docs working copy is refreshed only if it has no local edits or untracked files.
 - TypeDoc validates doc-comments for its default set of required declarations.
   `typedoc.json` excludes the mounting entry point and tests.
 
