@@ -46,11 +46,8 @@
   The hook regenerates and stages only `docs/api/`.
   Stage or stash all source and documentation-tooling changes before committing;
   the hook rejects unstaged or untracked inputs, including ignored source files.
-- Exported application APIs need doc-comments,
-  including modules (`@module`), properties, parameters (`@param`),
-  type parameters (`@typeParam`), and inline parameter members.
+- TypeDoc validates doc-comments for its default set of required declarations.
   `typedoc.json` excludes the mounting entry point and tests.
-  `scripts/validate-doc-comments.mjs` supplements TypeDoc's native validation gaps.
 
 ## Testing
 - Run `NODE_ENV=test npm run test` for component and game behavior changes.

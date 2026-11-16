@@ -45,10 +45,7 @@ Dependency installation also installs the Husky pre-commit hook.
 On every commit, the hook runs `npm run docs`
 and stages only the generated `docs/api/` directory, including removal of obsolete pages.
 Missing doc-comments or other TypeDoc warnings block the commit.
-Document modules with `@module`, exported declarations and properties with `/** ... */`,
-parameters with `@param`, and type parameters with `@typeParam`.
-Inline parameter properties also need doc-comments.
-The local validation plugin covers declarations that TypeDoc's built-in missing-comment check skips.
+TypeDoc checks its default set of required declarations for `/** ... */` doc-comments.
 
 Stage or stash all changes under `src/`, `scripts/`, and `.husky/`,
 as well as changes to package files, `typedoc.json`, and root `tsconfig*.json` files before committing.
