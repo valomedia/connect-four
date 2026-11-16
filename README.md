@@ -37,24 +37,15 @@ Then open the Vite URL printed in the terminal.
 
 ## API documentation
 
-Browse the [generated API reference](docs/api/README.md).
-TypeDoc and `typedoc-plugin-markdown` generate it from exported application APIs in `src/`.
-The React mounting entry point, tests, and test setup are excluded.
+Browse the [API reference](docs/api/README.md), generated with TypeDoc's `module` router.
+Update source doc-comments and run `npm run docs`; do not edit generated pages.
+TypeDoc checks its default set of required declarations, and warnings block commits.
 
-Dependency installation configures Git to use the standard hooks in `.githooks/`.
-On every commit, the hook runs `npm run docs` in a temporary snapshot of the staged files,
-using installed dependencies, and stages only `docs/api/`, including removal of obsolete pages.
-Missing doc-comments or other TypeDoc warnings block the commit.
-TypeDoc checks its default set of required declarations for `/** ... */` doc-comments.
-
-Unstaged, untracked, and ignored source changes do not affect generated docs and are left untouched.
-The hook refreshes the docs working copy only when it contains no local edits or untracked files;
-otherwise it updates only the committed docs.
-Unrelated files are never staged automatically.
-
-Do not edit `docs/api/` by hand; update the source comments and run `npm run docs` instead.
-Source links are disabled so generated Markdown does not depend on the current Git commit.
-If Git hooks were not installed, run `npm run prepare` to install them.
+`npm ci --include=dev` configures the native Git hooks in `.githooks/`;
+run `npm run prepare` to reinstall them.
+The pre-commit hook generates and stages only `docs/api/` from an isolated snapshot of staged files,
+leaving unstaged and untracked source changes untouched.
+It refreshes the docs working copy only if there are no local doc edits or untracked doc files.
 
 ## Project structure
 
