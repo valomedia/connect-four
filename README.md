@@ -41,13 +41,13 @@ Browse the [generated API reference](docs/api/README.md).
 TypeDoc and `typedoc-plugin-markdown` generate it from exported application APIs in `src/`.
 The React mounting entry point, tests, and test setup are excluded.
 
-Dependency installation also installs the Husky pre-commit hook.
+Dependency installation configures Git to use the standard hooks in `.githooks/`.
 On every commit, the hook runs `npm run docs`
 and stages only the generated `docs/api/` directory, including removal of obsolete pages.
 Missing doc-comments or other TypeDoc warnings block the commit.
 TypeDoc checks its default set of required declarations for `/** ... */` doc-comments.
 
-Stage or stash all changes under `src/`, `scripts/`, and `.husky/`,
+Stage or stash all changes under `src/`, `scripts/`, and `.githooks/`,
 as well as changes to package files, `typedoc.json`, and root `tsconfig*.json` files before committing.
 The hook rejects unstaged or untracked documentation inputs rather than generating docs from code
 that is not part of the commit.
