@@ -30,7 +30,6 @@ Then open the Vite URL printed in the terminal.
 - `npm run dev` - start the Vite development server.
 - `npm run lint` - run ESLint across the repository.
 - `npm run docs` - validate doc-comments and regenerate Markdown API documentation.
-- `npm run test:docs` - test documentation validation and the commit hook in a temporary Git repository.
 - `NODE_ENV=test npm run test` - run the Vitest and React Testing Library tests once.
 - `npm run test:integration` - run the Playwright browser integration tests.
 - `npm run build` - type-check the project and create a production build in `dist/`.

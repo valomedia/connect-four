@@ -16,7 +16,6 @@
 - `npm run test:integration` - run the Playwright browser integration tests.
 - `npm run lint` - run ESLint across the repository.
 - `npm run docs` - validate doc-comments and regenerate `docs/api/` with TypeDoc.
-- `npm run test:docs` - test doc-comment enforcement and the Git hook in an isolated repository.
 - `npm run build` - run TypeScript project builds and create the Vite production build.
 - `npm run preview` - preview the built Vite app locally after a build.
 
