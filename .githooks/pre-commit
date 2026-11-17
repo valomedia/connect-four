@@ -1,0 +1,49 @@
+#!/bin/sh
+# Copyright (c) 2026.
+# valo.media GmbH
+# All rights reserved.
+
+set -eu
+
+root=$(git rev-parse --show-toplevel)
+cd "$root"
+git_dir=$(git rev-parse --absolute-git-dir)
+index=$(git rev-parse --path-format=absolute --git-path index)
+work=$(mktemp -d "${TMPDIR:-/tmp}/connect-four-docs.XXXXXX")
+trap 'rm -rf -- "$work"' 0
+trap 'exit 1' HUP INT TERM
+
+# Export the commit's tree, not unstaged, untracked, or intent-to-add files.
+# The temporary index also works for initial commits and git commit -a.
+tree=$(git write-tree)
+snapshot="$work/tree"
+mkdir "$snapshot"
+GIT_INDEX_FILE="$work/index" git read-tree "$tree"
+GIT_INDEX_FILE="$work/index" git checkout-index --all --prefix="$snapshot/"
+ln -s "$root/node_modules" "$snapshot/node_modules"
+(
+    # Do not let Git settings from the parent commit leak into the generator.
+    unset $(git rev-parse --local-env-vars)
+    cd "$snapshot"
+    npm run docs -- --out "$snapshot/docs/api"
+)
+
+# Leave documentation edits alone, just as we leave source edits alone.
+# Otherwise refresh the working copy so a successful commit stays clean.
+refresh_docs=false
+if git diff --quiet -- docs/api &&
+    [ -z "$(git ls-files --others -- docs/api)" ]; then
+    refresh_docs=true
+fi
+
+if [ "$tree" != "$(git write-tree)" ]; then
+    echo 'API docs: the index changed during generation; retry the commit.' >&2
+    exit 1
+fi
+
+GIT_INDEX_FILE="$index" git --git-dir="$git_dir" --work-tree="$snapshot" add --all -- docs/api
+if [ "$refresh_docs" = true ]; then
+    rm -rf -- "$root/docs/api"
+    mkdir -p "$root/docs"
+    cp -R "$snapshot/docs/api" "$root/docs/api"
+fi

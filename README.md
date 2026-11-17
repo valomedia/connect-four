@@ -29,10 +29,23 @@ Then open the Vite URL printed in the terminal.
 
 - `npm run dev` - start the Vite development server.
 - `npm run lint` - run ESLint across the repository.
+- `npm run docs` - validate doc-comments and regenerate Markdown API documentation.
 - `NODE_ENV=test npm run test` - run the Vitest and React Testing Library tests once.
 - `npm run test:integration` - run the Playwright browser integration tests.
 - `npm run build` - type-check the project and create a production build in `dist/`.
 - `npm run preview` - preview the production build locally.
+
+## API documentation
+
+Browse the [API reference](docs/api/README.md), generated with TypeDoc's `module` router.
+Update source doc-comments and run `npm run docs`; do not edit generated pages.
+TypeDoc checks its default set of required declarations, and warnings block commits.
+
+`npm ci --include=dev` configures the native Git hooks in `.githooks/`;
+run `npm run prepare` to reinstall them.
+The pre-commit hook generates and stages only `docs/api/` from an isolated snapshot of staged files,
+leaving unstaged and untracked source changes untouched.
+It refreshes the docs working copy only if there are no local doc edits or untracked doc files.
 
 ## Project structure
 

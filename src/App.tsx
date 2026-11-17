@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025.
+ * Copyright (c) 2025-2026.
  * valo.media GmbH
  * All rights reserved.
  */
@@ -8,6 +8,11 @@
 //  App.tsx
 //  connect-four
 //
+
+/**
+ * Top-level page for the Connect Four game.
+ * @module
+ */
 
 import './App.css';
 import Board from './components/Board.tsx';

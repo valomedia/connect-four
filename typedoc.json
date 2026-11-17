@@ -1,0 +1,17 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["src"],
+  "entryPointStrategy": "expand",
+  "exclude": ["src/main.tsx", "**/*.test.*", "**/*.spec.*", "src/test/**"],
+  "tsconfig": "tsconfig.app.json",
+  "plugin": ["typedoc-plugin-markdown"],
+  "router": "module",
+  "out": "docs/api",
+  "readme": "none",
+  "disableSources": true,
+  "excludeExternals": true,
+  "validation": {
+    "notDocumented": true
+  },
+  "treatWarningsAsErrors": true
+}
