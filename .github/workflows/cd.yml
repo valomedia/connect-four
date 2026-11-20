@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   deploy:
-    uses: valomedia/github-workflows/.github/workflows/scheduled-sftp-release.yml@0e24ac0bdeb710a9d37ff088d95fe8789a8d4516 # v1.2.1
+    uses: valomedia/github-workflows/.github/workflows/scheduled-sftp-release.yml@dced356558fff409addc69828448854793927b4f # v1.3.0
     with:
       ci-workflow: ci.yml
       build-command: npm run build
