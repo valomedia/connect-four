@@ -24,7 +24,7 @@ export default defineConfig([
         extends: [
             js.configs.recommended,
             tseslint.configs.strictTypeChecked,
-            reactHooks.configs['recommended-latest'],
+            reactHooks.configs.flat['recommended-latest'],
             reactRefresh.configs.vite,
             // Enable lint rules for React
             eslintReact.configs['recommended-typescript'],
