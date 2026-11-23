@@ -15,6 +15,7 @@
 - `NODE_ENV=test npm run test` - run the Vitest test suite once.
 - `npm run test:integration` - run the Playwright browser integration tests.
 - `npm run lint` - run ESLint across the repository.
+- `npm run docs` - validate doc-comments and regenerate `docs/api/` with TypeDoc.
 - `npm run build` - run TypeScript project builds and create the Vite production build.
 - `npm run preview` - preview the built Vite app locally after a build.
 
@@ -40,7 +41,14 @@
 - Internal React component imports in this codebase use explicit `.tsx` extensions.
 - Prefer function declarations for React components and local helpers,
   matching the existing component style.
-- Do not hand-edit generated build output such as `dist/`.
+- Do not hand-edit generated build output such as `dist/` or generated API docs in `docs/api/`.
+- `npm ci --include=dev` configures Git's `core.hooksPath` as `.githooks` through `prepare`.
+  The hook generates `docs/api/` from an isolated snapshot of the commit's index,
+  using installed dependencies, and stages only those docs.
+  Unstaged and untracked inputs are left alone.
+  The docs working copy is refreshed only if it has no local edits or untracked files.
+- TypeDoc validates doc-comments for its default set of required declarations.
+  `typedoc.json` excludes the mounting entry point and tests.
 
 ## Testing
 - Run `NODE_ENV=test npm run test` for component and game behavior changes.

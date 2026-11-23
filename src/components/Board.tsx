@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025.
+ * Copyright (c) 2025-2026.
  * valo.media GmbH
  * All rights reserved.
  */
@@ -8,6 +8,11 @@
 //  Board.tsx
 //  connect-four
 //
+
+/**
+ * Interactive game board with turn handling, win detection, and reset controls.
+ * @module
+ */
 
 import {useState} from 'react';
 import Square from './Square.tsx';
